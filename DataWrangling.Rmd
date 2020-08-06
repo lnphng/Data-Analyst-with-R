@@ -1,0 +1,88 @@
+
+## Introduction to the Tidyverse_Datacamp
+
+Description:
+
+- Focused on a powerful set of tools, Tidyverse.
+- Learn the intertwined processes of data manipulation and visualization using the tools dplyr and ggplot2. 
+- Learn to manipulate data by filtering, sorting, and summarizing a real dataset of historical country data in order to answer exploratory questions. 
+- Learn to turn this processed data into informative line plots, bar plots, histograms, and more with the ggplot2 package.
+
+### 1. Data wrangling
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(gapminder)
+library(dplyr)
+library(knitr)
+```
+
+#### a. Filtering in R
+**Dataset gapminder**
+
+```{r echo = FALSE, results='asis'}
+kable(gapminder[1:5,])
+```
+
+**Filtering 1 year**
+```{r echo = FALSE, results='asis'}
+kable(head(gapminder %>%
+  filter(year == 1957),5))
+```
+
+**Filtering for one country and one year**
+
+```{r echo = FALSE, results='asis'}
+kable(head(gapminder %>%
+  filter(country == "China", year == 2002),5))
+```
+
+Sort in ascending order of lifeExp
+
+```{r echo=FALSE, results='asis'}
+
+# Sort in ascending order of lifeExp
+kable(head(gapminder %>%
+arrange(lifeExp),5))
+```
+
+Sort in descending order of lifeExp
+
+```{r echo=FALSE, results='asis'}  
+kable(head(gapminder %>%
+arrange(desc(lifeExp)),5))
+```
+
+Filter for the year 1957, then arrange in descending order of population
+
+```{r echo=FALSE, results='asis'} 
+kable(head(gapminder %>%
+  filter(year == 1957) %>%
+  arrange(desc(pop)),5))
+```
+
+Use mutate to create a new column called lifeExpMonths
+
+```{r echo = FALSE, results= 'asis'}
+kable(head(gapminder %>%
+  mutate(lifeExpMonths = 12*lifeExp),5))
+```
+
+# Filter, mutate, and arrange the gapminder dataset
+
+```{r echo = FALSE, results='asis'}
+kable(head(gapminder %>%
+  filter(year == 2007) %>%
+  mutate(lifeExpMonths =12*lifeExp) %>%
+  arrange(desc(lifeExpMonths)),5))
+
+```
+
+
+
+
+
+
+
+
