@@ -1,5 +1,5 @@
 ## Data Analyst with R Track
-### [Link course Datacamp](https://learn.datacamp.com/career-tracks/data-analyst-with-r?version=3)
+### [Link course Datacamp](https://www.datacamp.com/tracks/data-analyst-with-r)
 
 In this track, I learn how to import, clean, manipulate, and visualize data in R—all integral skills for any aspiring data professional or researcher. 
 
