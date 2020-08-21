@@ -5,7 +5,7 @@ In this track, I learn how to import, clean, manipulate, and visualize data in R
 
 Through interactive exercises, I get hands-on with `ggplot2` and `tidyverse` packages like `dplyr` and `readr`. 
 
-Develop your data manipulation and exploratory data analysis skills by working with a wide range of real-world datasets, including everything from Australian population figures to Netflix films. 
+Develop data manipulation and exploratory data analysis skills by working with a wide range of real-world datasets, including everything from Australian population figures to Netflix films. 
 
 ## Introduction to the Tidyverse
 
